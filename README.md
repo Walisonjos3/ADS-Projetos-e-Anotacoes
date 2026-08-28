@@ -27,13 +27,13 @@ Este espaço tem como objetivo documentar minha trajetória acadêmica, registra
 │   ├── Autoria-Web/
 │   │   ├── CSS/
 │   │   │   ├── Anotacoes/
-│   │   │   └── Beecrowd/
+│   │   │   └── Exercicios/
 │   │   ├── HTML/
 │   │   │   ├── Anotacoes/
-│   │   │   └── Beecrowd/
+│   │   │   └── Exercicios/
 │   │   └── JAVASCRIPT/
 │   │       ├── Anotacoes/
-│   │       └── Beecrowd/
+│   │       └── Exercicios/
 │   └── Programacao-Orientada-a-Objetos/
 │       └── Fundamentos-Java/
 │           ├── Anotacoes/
