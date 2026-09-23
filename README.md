@@ -13,7 +13,7 @@ Este espaço tem como objetivo documentar minha trajetória acadêmica, registra
 
 ---
 
-## 🗂️ Estrutura por Período
+## 🗂️ Estrutura do Repositório
 
 ```text
 .
@@ -25,13 +25,11 @@ Este espaço tem como objetivo documentar minha trajetória acadêmica, registra
 │
 ├── 2-Periodo/
 │   ├── Autoria-Web/
-│   │   ├── CSS/
-│   │   │   ├── Anotacoes/
+│   │   ├── HTML-e-CSS/
+│   │   │   ├── Anotacoes-HTML/
+│   │   │   ├── Anotacoes-CSS/
 │   │   │   └── Exercicios/
-│   │   ├── HTML/
-│   │   │   ├── Anotacoes/
-│   │   │   └── Exercicios/
-│   │   └── JAVASCRIPT/
+│   │   └── JavaScript/
 │   │       ├── Anotacoes/
 │   │       └── Exercicios/
 │   └── Programacao-Orientada-a-Objetos/
