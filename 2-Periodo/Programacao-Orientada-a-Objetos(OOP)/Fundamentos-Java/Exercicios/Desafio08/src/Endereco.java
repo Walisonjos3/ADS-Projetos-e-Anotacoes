@@ -26,7 +26,6 @@ public class Endereco {
         if (numero < 0) {
             return;
         }
-
         this.numero = numero;
     }
 

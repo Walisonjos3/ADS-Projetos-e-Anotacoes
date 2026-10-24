@@ -21,7 +21,7 @@ public class EntregaExpressa extends Entrega {
 
     @Override
     public String gerarDescricao() {
-        return super.gerarDescricao() + "\nPrazo de Horas: " +this.getPrazoHoras() + "\nEntregador: " + this.getNomeEntregador();
+        return super.gerarDescricao() + "Prazo de Horas: " + this.getPrazoHoras() + "\nEntregador: " + this.getNomeEntregador() + "\n";
     }
 
     public String getNomeEntregador() {

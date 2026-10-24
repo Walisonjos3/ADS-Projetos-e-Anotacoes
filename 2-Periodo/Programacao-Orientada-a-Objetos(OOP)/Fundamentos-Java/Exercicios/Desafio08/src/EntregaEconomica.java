@@ -1,11 +1,11 @@
 public class EntregaEconomica extends Entrega {
 
-    private int prazoHoras;
+    private int prazoDias;
     private String centroDistribuicao;
 
-    public EntregaEconomica(Encomenda encomenda, Rota rota, int prazoHoras, String centroDistribuicao) {
+    public EntregaEconomica(Encomenda encomenda, Rota rota, int prazoDias, String centroDistribuicao) {
         super(encomenda, rota);
-        this.setPrazoHoras(prazoHoras);
+        this.setPrazoDias(prazoDias);
         this.centroDistribuicao = centroDistribuicao;
     }
 
@@ -14,28 +14,28 @@ public class EntregaEconomica extends Entrega {
         if (this.getRota().getDistancia() == 0) {
             return 0;
         } else if (this.getEncomenda().getPesoKg() >= 10) {
-            return (super.calcularFrete() + (0.20 * this.getRota().getDistancia()) * 0.10);
+            return super.calcularFrete() + ((0.20 * this.getRota().getDistancia()) * 0.90);
         }
         return super.calcularFrete() + (0.20 * this.getRota().getDistancia());
     }
 
     @Override
     public String gerarDescricao() {
-        return super.gerarDescricao() + "\nPrazo de Horas: " +this.getPrazoHoras() + "\nCentro de Distribuição: " + this.getCentroDistribuicao();
+        return super.gerarDescricao() + "Prazo de Dias: " + this.getPrazoDias() + "\nCentro de Distribuição: " + this.getCentroDistribuicao() + "\n";
     }
 
     public String getCentroDistribuicao() {
         return this.centroDistribuicao;
     }
 
-    public int getPrazoHoras() {
-        return this.prazoHoras;
+    public int getPrazoDias() {
+        return this.prazoDias;
     }
 
-    private void setPrazoHoras(int prazoHoras) {
-        if (prazoHoras < 0) {
+    private void setPrazoDias(int prazoDias) {
+        if (prazoDias < 0) {
             return;
         }
-        this.prazoHoras = prazoHoras;
+        this.prazoDias = prazoDias;
     }
 }
