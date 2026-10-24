@@ -1,5 +1,4 @@
 public class Entrega {
-
     private Encomenda encomenda;
     private Rota rota;
     private boolean concluida;
@@ -8,6 +7,14 @@ public class Entrega {
         this.encomenda = encomenda;
         this.rota = rota;
         this.concluida = false;
+    }
+
+    public boolean concluirEntrega() {
+        if (this.isConcluida()) {
+            return false;
+        }
+        this.concluida = true;
+        return true;
     }
 
     public double calcularFrete() {

@@ -11,7 +11,7 @@ public class Encomenda {
     }
 
     public String descrever() {
-        return this.destino.formatar() + "Código: " + this.getCodigo() + "\nPeso: " + this.getPesoKg() + "\n";
+        return this.getDestino().formatar() + "Código: " + this.getCodigo() + "\nPeso: " + this.getPesoKg() + "\n";
     }
 
     public double getPesoKg() {

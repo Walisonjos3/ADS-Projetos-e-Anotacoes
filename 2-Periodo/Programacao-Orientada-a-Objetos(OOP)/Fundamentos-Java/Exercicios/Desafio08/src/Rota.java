@@ -12,7 +12,7 @@ public class Rota {
         if (this.getDistancia() == 0) {
             return 0;
         }
-        return this.distanciaKm * 1 + this.pedagio;
+        return this.getDistancia() * 1 + this.getPedagio();
     }
 
     public double getDistancia() {
@@ -23,7 +23,6 @@ public class Rota {
         if (distancia < 0) {
             return;
         }
-
         this.distanciaKm = distancia;
     }
 
@@ -35,7 +34,6 @@ public class Rota {
         if (pedagio < 0) {
             return;
         }
-
         this.pedagio = pedagio;
     }
 }
