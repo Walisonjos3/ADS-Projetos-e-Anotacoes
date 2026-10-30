@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --backgroundSemTema: #F3F7FB;
+    --backgroundComTema: #101729;
+    --backgroundHeader: #2764EC;
+    --backgroundMensagem: #eef4ff;
+    --botaoNome: #ffffff;
+    --corBotao: #1E4ED8;
+    --botoesEspeciais: #e5e7eb;
+    --cardComTema: #111827; /* Corrigido o traço faltando */
+    --textos: #1f2937;
+    --titulosSemTema: #000000;
+    --titulosComTema: #ffffff;
+    --corBorda: #dbe4f0;
+}
+
+* { /* Corrigido o seletor universal de '-' para '*' */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    background-color: var(--backgroundSemTema);
+    min-height: 100vh;
+}
+
+.pagina {
+    width: 80%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    background-color: var(--backgroundHeader);
+    color: var(--titulosComTema);
+    border-radius: 16px;
+    padding: 56px 24px 32px;
+    flex-basis: 150px;
+    margin-top: 50px;
+}
+
+.topo > p {
+    color: var(--titulosComTema);
+    margin: 0;
+}
+
+.container > .fundocard {
+    margin-top: 60px;
+}
+
+.fundocard {
+    display: flex;
+    gap: 24px;
+}
+
+/* AJUSTADO COM FLEXBOX PARA 2 POR LINHA */
+.fundocard.blocos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px; /* Espaçamento menor para caber perfeitamente */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px 24px;
+    background-color: var(--backgroundSemTema);
+    border: 1px solid var(--corBorda);
+    border-radius: 12px;
+    
+    /* Faz cada card ocupar cerca de 48% da linha (2 por linha) 
+       e quebra automaticamente para o mobile se a tela for menor que 280px */
+    flex: 1 1 48%; 
+    min-width: 280px; 
+}
+
+.card.mensagem {
+    background-color: var(--backgroundMensagem);
+}
+
+/* Classe utilitária para o Exemplo 4 */
+.card.destaque-ativo {
+    background-color: #d1fae5;
+    border-color: #10b981;
+}
+
+.titulo {
+    font-size: 22px;
+    color: var(--titulosSemTema);
+}
+
+p {
+    color: var(--textos);
+    margin-left: 10px;
+}
+
+.botao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--corBotao);
+    border: none;
+    border-radius: 12px;
+    color: var(--botaoNome);
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.botao.tema, .botao.mensagem, .botao.texto, .botao.saudar, .botao.classe {
+    display: flex;
+    max-width: 150px;
+    background-color: var(--botaoNome);
+    color: var(--corBotao);
+}
+
+.botao.texto, .botao.saudar, .botao.classe, .botao.mensagem {
+    background-color: var(--corBotao);
+    color: var(--botaoNome);
+}
+
+.botao.subtrair {
+    background-color: var(--botoesEspeciais);
+    color: var(--corBotao);
+}
+
+.botao.resetar {
+    background-color: var(--botoesEspeciais);
+    color: var(--titulosSemTema);
+}
+
+.botao.especial, .botao.botao.subtrair.especial {
+    width: 50px;
+}
+
+#botoes {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.botao:hover {
+    transform: translateY(-1px);
+}
+
+.label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input {
+    border-radius: 12px;
+    border: 1px solid var(--corBorda);
+    padding: 12px 16px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 4px #2564eb17;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+#link {
+    background-color: var(--corBotao);
+    color: var(--botaoNome);
+    font-weight: bold;
+    border-radius: 16px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#link:hover {
+    text-decoration: underline;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Definição das cores para quando o tema escuro estiver ativo */
+body.tema-escuro {
+    background-color: var(--backgroundComTema);
+}
+
+body.tema-escuro .card {
+    background-color: var(--cardComTema);
+    border-color: #374151;
+}
+
+body.tema-escuro .titulo {
+    color: var(--titulosComTema);
+}
+
+body.tema-escuro p {
+    color: #9ca3af;
+}
+
+/* Ajuste específico para o texto do card de boas-vindas no tema escuro */
+body.tema-escuro .card.mensagem {
+    background-color: #1e293b;
+}
+
+/* Ajustes para o Tema Escuro: Label e Rodapé */
+body.tema-escuro .label {
+    color: var(--titulosComTema); /* Deixa a label branca */
+}
+
+body.tema-escuro .rodape span {
+    color: var(--titulosComTema); /* Deixa o texto do copyright branco */
+}
