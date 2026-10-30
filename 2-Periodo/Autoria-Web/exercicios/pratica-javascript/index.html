@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="pagina">
+        <header class="topo">
+            <h1 class="tituloPrincipal">JavaScript na prática</h1>
+            <p>Aprendendo a colocar comportamentos à interface usando JavaScript.</p>
+            <button class="botao tema">Alterar tema</button>
+        </header>
+        <main class="container">
+            <section class="fundocard">
+                <article class="card mensagem">
+                    <h2 class="titulo">Boas-vindas</h2>
+                    <p id="mensagem">Clique no botão abaixo para mostrar uma mensagem.</p>
+                    <button class="botao mensagem">Mostrar mensagem</button>
+                </article>
+            </section>
+            <section class="fundocard blocos">
+                <article class="card">
+                    <h2 class="titulo">Exemplo 1: Alterar texto da página</h2>
+                    <p id="textoModificado">Este texto será modificado com JavaScript.</p>
+                    <button class="botao texto">Alterar texto</button>
+                </article>
+                <article class="card">
+                    <h2 class="titulo">Exemplo 2: Contador</h2>
+                    <p>Valor atual: <span id="contador">0</span></p>
+                    <div id="botoes">
+                        <button class="botao especial">+1</button>
+                        <button class="botao subtrair especial">-1</button>
+                        <button class="botao resetar">Resetar</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <h2 class="titulo">Exemplo 3: Entrada do usuário</h2>
+                    <label for="inputNome" class="label">Digite seu nome</label>
+                    <input
+                        id="inputNome"
+                        type="text"
+                        placeholder="Seu nome"
+                        class="input">
+                    <button class="botao saudar">Saudar</button>
+                    <!-- Adicionada uma classe e id para facilitar a manipulação no JS -->
+                    <p id="mensagemSaudacao"></p>
+                </article>
+                <article class="card" id="cardClasse">
+                    <h2 class="titulo">Exemplo 4: Classe CSS</h2>
+                    <p>Este bloco pode receber ou perder uma classe pelo JavaScript.</p>
+                    <button class="botao classe">Mudar classe</button>
+                </article>
+            </section>
+        </main>
+        <footer class="rodape">
+            <span>&copy;Desenvolvido por <strong>Walison José</strong></span>
+            <a href="https://github.com/Walisonjos3" target="_blank" rel="noopener noreferrer" id="link">GitHub</a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
