@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +10,16 @@
     <div class="pagina">
         <header class="topo">
             <h1 class="tituloPrincipal">JavaScript na prática</h1>
-            <p>Aprendendo a colocar comportamentos à interface usando JavaScript.</p>
+            <p>Aprendendo a colocar comportamentos a interface usando JavaScript.</p>
             <button class="botao tema">Alterar tema</button>
         </header>
         <main class="container">
             <section class="fundocard">
-                <article class="card mensagem">
-                    <h2 class="titulo">Boas-vindas</h2>
-                    <p id="mensagem">Clique no botão abaixo para mostrar uma mensagem.</p>
-                    <button class="botao mensagem">Mostrar mensagem</button>
-                </article>
+                    <article class="card mensagem"> <!--É interessante colocar esse article aqui?? -->
+                        <h2 class="titulo">Boas-vindas</h2>
+                        <p id="mensagem">Clique no botão abaixo para mostrar uma mensagem.</p>
+                        <button class="botao mensagem">Mostrar mensagem</button>
+                    </article>
             </section>
             <section class="fundocard blocos">
                 <article class="card">
@@ -44,9 +44,8 @@
                         type="text"
                         placeholder="Seu nome"
                         class="input">
-                    <button class="botao saudar">Saudar</button>
-                    <!-- Adicionada uma classe e id para facilitar a manipulação no JS -->
-                    <p id="mensagemSaudacao"></p>
+                        <button class="botao saudar">Saudar</button>
+                        <p id="saidaSaudacao"></p>
                 </article>
                 <article class="card" id="cardClasse">
                     <h2 class="titulo">Exemplo 4: Classe CSS</h2>

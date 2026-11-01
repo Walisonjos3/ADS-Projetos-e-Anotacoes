@@ -3,22 +3,26 @@
 :root {
     --backgroundSemTema: #F3F7FB;
     --backgroundComTema: #101729;
+     --backgroundDestaque: #2d3852;
     --backgroundHeader: #2764EC;
     --backgroundMensagem: #eef4ff;
     --botaoNome: #ffffff;
     --corBotao: #1E4ED8;
     --botoesEspeciais: #e5e7eb;
-    --cardComTema: #111827; /* Corrigido o traço faltando */
+    --cardComTema: #111827;
+    --cardEspecial: #1e293b;
     --textos: #1f2937;
+    --textosComTema: #9ca3af;
     --titulosSemTema: #000000;
     --titulosComTema: #ffffff;
     --corBorda: #dbe4f0;
+    --corBordaCardTema: #374151;
 }
 
-* { /* Corrigido o seletor universal de '-' para '*' */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 body {
@@ -63,13 +67,11 @@ body {
     gap: 24px;
 }
 
-/* AJUSTADO COM FLEXBOX PARA 2 POR LINHA */
 .fundocard.blocos {
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    gap: 24px; /* Espaçamento menor para caber perfeitamente */
 }
 
 .card {
@@ -81,21 +83,24 @@ body {
     background-color: var(--backgroundSemTema);
     border: 1px solid var(--corBorda);
     border-radius: 12px;
-    
-    /* Faz cada card ocupar cerca de 48% da linha (2 por linha) 
-       e quebra automaticamente para o mobile se a tela for menor que 280px */
-    flex: 1 1 48%; 
-    min-width: 280px; 
+    flex: 1 1 45%;
+    max-width: 1100px;
+    min-width: 250px;
 }
 
 .card.mensagem {
     background-color: var(--backgroundMensagem);
 }
 
-/* Classe utilitária para o Exemplo 4 */
-.card.destaque-ativo {
-    background-color: #d1fae5;
-    border-color: #10b981;
+.card.destaqueAtivo {
+    background-color: var(--backgroundDestaque);
+    color: var(--backgroundSemTema);
+}
+
+.card.destaqueAtivoTema {
+    background-color: var(--backgroundHeader) !important; 
+    color: var(--titulosSemTema) !important;
+    /*Vi que minha professora tinha esquecido disso e resolvi tentar fazer, mas não ficou como eu queria kkkkkkkkkkkkk. O título não ficou com a cor certa.*/
 }
 
 .titulo {
@@ -143,7 +148,7 @@ p {
     color: var(--titulosSemTema);
 }
 
-.botao.especial, .botao.botao.subtrair.especial {
+.botao.especial, .botao.subtrair.especial {
     width: 50px;
 }
 
@@ -156,7 +161,7 @@ p {
 }
 
 .botao:hover {
-    transform: translateY(-1px);
+    transform: translateY(-1px); /*Eu vi minha professora fazendo isso, olha que legal!!! Serve para dar efeitos nos botões, certo?*/
 }
 
 .label {
@@ -174,7 +179,7 @@ p {
     margin-bottom: 12px;
 }
 
-.input:focus {
+.input:focus { /* Qual a diferença pro active ?? Vi minha professora utilizando isso também*/
     border-color: #000000;
     box-shadow: 0 0 0 4px #2564eb17;
 }
@@ -203,34 +208,33 @@ p {
     cursor: pointer;
 }
 
-/* Definição das cores para quando o tema escuro estiver ativo */
-body.tema-escuro {
+
+/* Aqui aprendi a modificar o tema de uma página, muito legal!! */
+body.temaEscuro {
     background-color: var(--backgroundComTema);
 }
 
-body.tema-escuro .card {
+body.temaEscuro .card {
     background-color: var(--cardComTema);
-    border-color: #374151;
+    border-color: var(--corBordaCardTema);
 }
 
-body.tema-escuro .titulo {
+body.temaEscuro .titulo {
     color: var(--titulosComTema);
 }
 
-body.tema-escuro p {
-    color: #9ca3af;
+body.temaEscuro p {
+    color: var(--textosComTema);
 }
 
-/* Ajuste específico para o texto do card de boas-vindas no tema escuro */
-body.tema-escuro .card.mensagem {
-    background-color: #1e293b;
+body.temaEscuro .card.mensagem {
+    background-color: var(--cardEspecial);
 }
 
-/* Ajustes para o Tema Escuro: Label e Rodapé */
-body.tema-escuro .label {
-    color: var(--titulosComTema); /* Deixa a label branca */
+body.temaEscuro .label {
+    color: var(--titulosComTema);
 }
 
-body.tema-escuro .rodape span {
-    color: var(--titulosComTema); /* Deixa o texto do copyright branco */
+body.temaEscuro .rodape span {
+    color: var(--titulosComTema);
 }

@@ -1,4 +1,3 @@
-// Exemplo inicial: Mensagem de boas-vindas
 const botaoMensagem = document.querySelector('.botao.mensagem');
 const mensagem = document.querySelector('#mensagem');
 
@@ -6,7 +5,6 @@ botaoMensagem.addEventListener('click', () => {
     mensagem.textContent = 'Seja Bem-Vindo ao JavaScript! Gostou ?';
 });
 
-// Exemplo 1: Alterar texto da página
 const botaoTexto = document.querySelector('.botao.texto');
 const novoTexto = document.querySelector('#textoModificado');
 
@@ -14,7 +12,6 @@ botaoTexto.addEventListener('click', () => {
     novoTexto.textContent = 'Parabéns!! Você modificou esse texto com JavaScript!!!';
 });
 
-// Exemplo 2: Contador
 const botaoSomar = document.querySelector('.botao.especial');
 const botaoSubtrair = document.querySelector('.botao.subtrair.especial');
 const botaoResetar = document.querySelector('.botao.resetar');
@@ -32,49 +29,47 @@ botaoSubtrair.addEventListener('click', () => {
     if (contador < 0) {
         contador = 0;
     }
+
     contadorValor.textContent = contador;
 });
 
 botaoResetar.addEventListener('click', () => {
     contador = 0;
     contadorValor.textContent = contador;
-});
+})
 
-// Exemplo 3: Entrada do usuário (Saudação)
-const botaoSaudar = document.querySelector('.botao.saudar');
+const botaoSaudacao = document.querySelector('.botao.saudar');
 const inputNome = document.querySelector('#inputNome');
-const mensagemSaudacao = document.querySelector('#mensagemSaudacao');
+const mensagemSaudacao = document.querySelector('#saidaSaudacao');
 
-botaoSaudar.addEventListener('click', () => {
-    const nome = inputNome.value.trim();
+botaoSaudacao.addEventListener('click', () => {
+    const nome = inputNome.value.trim(); // Esse trim é igual ao strip do Python ?
     if (nome !== "") {
-        mensagemSaudacao.textContent = `Olá, ${nome}! Seja muito bem-vindo(a)!`;
+        mensagemSaudacao.textContent = `Olá, ${nome}! Seja muitpo bem-vindo(a) ao JavaScript.`
     } else {
-        mensagemSaudacao.textContent = "Por favor, digite seu nome primeiro!";
+        mensagemSaudacao.textContent = "Por favor, digite seu nome!"
     }
 });
 
-// Exemplo 4: Manipulação de Classe CSS
-const botaoClasse = document.querySelector('.botao.classe');
+const corpoBody = document.body; // Isso recebe o que tem no body?
 const cardClasse = document.querySelector('#cardClasse');
-
-botaoClasse.addEventListener('click', () => {
-    // Alterna (adiciona se não tiver, remove se já tiver) a classe de destaque no card
-    cardClasse.classList.toggle('destaque-ativo');
-});
-
-// Funcionalidade: Alterar Tema (Dark Mode / Light Mode)
+const botaoClasse = document.querySelector('.botao.classe');
 const botaoTema = document.querySelector('.botao.tema');
-const corpoBody = document.body;
 
 botaoTema.addEventListener('click', () => {
-    // Alterna a classe 'tema-escuro' no body
-    corpoBody.classList.toggle('tema-escuro');
+    corpoBody.classList.toggle('temaEscuro') //O que seria esse toggle ?? Minha professora falou mais não estendi muito bem.
 
-    // Opcional: Mudar o texto do botão dependendo do tema atual
-    if (corpoBody.classList.contains('tema-escuro')) {
-        botaoTema.textContent = 'Tema Claro';
-    } else {
-        botaoTema.textContent = 'Alterar tema';
-    }
 });
+
+botaoClasse.addEventListener('click', () => {
+    
+    if (corpoBody.classList.contains('temaEscuro')) { // Esse contains seria para verificar o valor que tem dentro dele, certo ?
+        cardClasse.classList.toggle('destaqueAtivoTema');
+    } else {
+        cardClasse.classList.toggle('destaqueAtivo');
+    }
+
+});
+
+
+
